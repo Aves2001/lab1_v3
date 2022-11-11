@@ -12,6 +12,10 @@ class Laptop(Computer):
 
         self.duration_of_autonomous_operation_in_minutes = duration_of_autonomous_operation_in_minutes
 
+    def __str__(self):
+        return super(Laptop, self).__str__() +\
+               f"\nЗаряду батареї вистачить на {self.duration_of_autonomous_operation_in_minutes} ХВ"
+
     def _cost(self):
         return super(Laptop, self)._cost() + self.duration_of_autonomous_operation_in_minutes / 10
 
