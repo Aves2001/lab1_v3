@@ -3,11 +3,11 @@ from computer import Computer
 
 class Laptop(Computer):
     def __init__(self,
-                 processor_frequency_MHz,
-                 number_cores,
-                 memory_capacity_MB,
-                 hard_disk_capacity_GB,
-                 duration_of_autonomous_operation_in_minutes):
+                 processor_frequency_MHz=0,
+                 number_cores=0,
+                 memory_capacity_MB=0,
+                 hard_disk_capacity_GB=0,
+                 duration_of_autonomous_operation_in_minutes=0):
         super(Laptop, self).__init__(processor_frequency_MHz, number_cores, memory_capacity_MB, hard_disk_capacity_GB)
 
         self.duration_of_autonomous_operation_in_minutes = duration_of_autonomous_operation_in_minutes
